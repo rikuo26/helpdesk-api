@@ -1,0 +1,18 @@
+{
+  "name": "helpdesk-api-dev",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-vscode.vscode-node-azure-pack",
+        "ms-vscode.powershell"
+      ]
+    }
+  },
+  "postCreateCommand": "npm i -g azure-functions-core-tools@4 --unsafe-perm=true && npm ci || true",
+  "remoteUser": "node"
+}
